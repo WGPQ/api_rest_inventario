@@ -1,11 +1,11 @@
 {
-  "name": "Api_rest",
+  "name": "api_rest",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon src/index.js --exec babel-node"
+    "start": "node ."
   },
   "keywords": [],
   "author": "",
