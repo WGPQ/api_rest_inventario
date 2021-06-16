@@ -8,9 +8,9 @@ const ProductoController = {
                 ]
             })
             .then((data) => {
-                res.json({
-                    productos: data
-                });
+                res.json(
+                    data
+                );
             })
             .catch((err) => {
                 res.status(500).send({
@@ -28,9 +28,9 @@ const ProductoController = {
                     id
                 }
             });
-            res.json({
-                producto: producto
-            });
+            res.json(
+                 producto
+            );
         } catch (e) {
             console.log(e);
         }
@@ -52,10 +52,9 @@ const ProductoController = {
                 fields: ['descripcion', 'precioUnitario', 'stock', 'iva']
             });
             if (nuevoProducto) {
-                return res.json({
-                    message: 'Nuevo producto fue creado correctamente',
-                    producto: nuevoProducto
-                });
+                return res.json(
+                     nuevoProducto
+                );
             }
         } catch (e) {
             res.status(500).json({
@@ -95,10 +94,9 @@ const ProductoController = {
                 });
             }
 
-            return res.json({
-                message: 'Producto fue actualizado correctamente',
-                producto: tbl_productos
-            });
+            return res.json(
+                tbl_productos
+            );
         } catch (e) {
             res.status(500).json({
                 message: 'Algo salio mal',
@@ -116,10 +114,9 @@ const ProductoController = {
                     id
                 }
             });
-            res.json({
-                message: 'Producto eliminado correctamente',
-                count: eliminarProducto
-            });
+            res.json(
+                 eliminarProducto
+            );
         } catch (e) {
             console.log(e);
         }
